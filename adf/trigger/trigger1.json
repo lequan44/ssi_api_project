@@ -14,8 +14,8 @@
 		"type": "ScheduleTrigger",
 		"typeProperties": {
 			"recurrence": {
-				"frequency": "Minute",
-				"interval": 15,
+				"frequency": "Hour",
+				"interval": 12,
 				"startTime": "2025-08-26T00:45:00",
 				"endTime": "2025-08-29T17:27:00",
 				"timeZone": "SE Asia Standard Time"
