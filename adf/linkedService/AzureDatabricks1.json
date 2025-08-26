@@ -1,0 +1,13 @@
+{
+	"name": "AzureDatabricks1",
+	"properties": {
+		"annotations": [],
+		"type": "AzureDatabricks",
+		"typeProperties": {
+			"domain": "https://adb-3655074351847575.15.azuredatabricks.net",
+			"authentication": "MSI",
+			"workspaceResourceId": "/subscriptions/c0915d56-f27f-4318-ad80-19ce0aba2459/resourceGroups/dbr_group/providers/Microsoft.Databricks/workspaces/lequan_workspace",
+			"existingClusterId": "0826-171027-xpni3yqq"
+		}
+	}
+}
