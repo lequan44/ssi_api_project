@@ -7,9 +7,6 @@
 		},
 		"AzureDatabricks1_accessToken": {
 			"value": ""
-		},
-		"AzureDatabricks1_properties_typeProperties_existingClusterId": {
-			"value": "0826-171027-xpni3yqq"
 		}
 	}
 }
