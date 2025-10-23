@@ -8,31 +8,29 @@ current_date = date.today()
 current_date_path = current_date.strftime("%Y%m%d")
 print("Current Date:", current_date_path)
 
-url = "https://fc-data.ssi.com.vn/api/v2/Market/DailyOhlc"
+url = "https://fc-data.ssi.com.vn/api/v2/Market/IndexComponents"
+
 headers = {
     "Authorization": f"Bearer {get_config.access_token}",
     "Content-Type": "application/json"
 }
 
 df = pd.DataFrame()
-data_date = current_date.strftime('%d/%m/%Y')
 
 for index in range(1, 10):
     params = {
-            "fromDate": data_date,
-            "toDate": data_date,
-            "pageIndex": index,
-            "pageSize": 1000
-    }
+        "pageIndex": index,
+        "pageSize": 1000
+        }
     response = requests.get(url, headers=headers, params=params)
-    data = response.json().get('data', [])
+    data = response.json()['data']
     df_response = pd.DataFrame(data)
     df = pd.concat([df, df_response], ignore_index=True)
     time.sleep(1)
     if len(df_response) == 0:
         break
 
-# Export to csv file
-output_dir = '~/ssi_api_data/daily_ohlc'
-df.to_csv(f"{output_dir}/ohlc_{current_date_path}.csv", index=False,encoding='utf-8-sig')
+
+output_dir = '~/ssi_api_data/index_components'
+df.to_csv(f"{output_dir}/index_components_{current_date_path}.csv", index=False,encoding='utf-8-sig')
 print(f"File exported successfully to {output_dir}")

@@ -33,3 +33,4 @@ df = pd.DataFrame(data)
 # Export to csv file
 output_dir = '~/ssi_api_data/daily_stock_price'
 df.to_csv(f"{output_dir}/stock_price_{current_date_path}.csv", index=False,encoding='utf-8-sig')
+print(f"File exported successfully to {output_dir}")

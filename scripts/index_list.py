@@ -32,5 +32,5 @@ df = pd.DataFrame(data)
 
 output_dir = '~/ssi_api_data/index_list'
 df.to_csv(f"{output_dir}/index_list_{current_date_path}.csv", index=False,encoding='utf-8-sig')
-
+print(f"File exported successfully to {output_dir}")
 

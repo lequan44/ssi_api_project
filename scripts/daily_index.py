@@ -51,5 +51,5 @@ for index in index_list:
 
 output_dir = '~/ssi_api_data/daily_index'
 df.to_csv(f"{output_dir}/daily_index_{current_date_path}.csv", index=False,encoding='utf-8-sig')
-
+print(f"File exported successfully to {output_dir}")
 
