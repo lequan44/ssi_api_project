@@ -1,5 +1,4 @@
-import os
-from datetime import date,timedelta
+from datetime import date
 import pandas as pd
 import requests
 import get_config
